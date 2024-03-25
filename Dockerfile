@@ -2,7 +2,7 @@
 FROM node:16-alpine
 
 # Set the working directory in the container
-WORKDIR /src/app
+WORKDIR /src
 
 # Copy the package.json and package-lock.json (or yarn.lock) files
 COPY package*.json ./
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Define the command to run your app using CMD which defines your runtime
-CMD ["node", "app.js"]
+CMD ["node", "app.ts"]
